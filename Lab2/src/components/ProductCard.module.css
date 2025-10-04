@@ -1,5 +1,6 @@
 .cardContainer {
-  background-color: rgba(255, 255, 255, 0.896);
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.85); /* 어두운 반투명 */
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1rem;
@@ -8,16 +9,19 @@
 
   display: grid;
   grid-template-columns: 40% 60%;
-  color: #333;
+  color: #fff;
   transition: all 0.3s ease;
 }
 
+/* 이미지: 카드 높이에 맞게 꽉 채우기 */
 .cardContainer img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 
+/* 상품 정보 */
 .productInfo {
   display: inline-flex;
   flex-direction: column;
@@ -40,6 +44,7 @@
   margin-left: 0.2rem;
 }
 
+/* 수량 조절 버튼 */
 .amountContainer {
   display: flex;
   justify-content: center;
@@ -53,30 +58,18 @@
   width: 1.6rem;
   height: 1.6rem;
   color: #fff;
-  background-color: #333;
-
+  background-color: #555;
   border: none;
   border-radius: 20%;
   margin-bottom: 1.8rem;
+  cursor: pointer;
 }
 
 .amountContainer p {
   font-size: 1.2rem;
 }
 
-.remove {
-  display: inline-block;
-  padding: 0.2rem 0.8rem;
-  border: none;
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
-
-  background-color: #333;
-  color: #fff;
-  transition: all 0.5s;
-  margin-bottom: 0.5rem;
-}
-
+/* 총합 */
 .total {
   font-size: 1.2rem;
 }
@@ -86,12 +79,41 @@
   margin-left: 0.2rem;
 }
 
+/* 우상단 빨간 원형 remove 버튼 */
+.removeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: #e53935;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+.removeBtn::before {
+  content: "−";
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* 반응형: 중앙 정렬 */
 @media (max-width: 768px) {
   .cardContainer {
     width: 100%;
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    justify-items: center;
+    margin: 0 auto;
   }
 
   .cardContainer img {
@@ -110,7 +132,6 @@
     font-size: 1rem;
   }
 
-  .remove,
   .total {
     font-size: 1rem;
   }
@@ -124,7 +145,7 @@
   }
 
   .cardContainer img {
-    height: 25rem;
+    height: 22rem;
   }
 
   .productInfo h3 {
@@ -139,7 +160,6 @@
     font-size: 0.9rem;
   }
 
-  .remove,
   .total {
     font-size: 0.9rem;
   }
