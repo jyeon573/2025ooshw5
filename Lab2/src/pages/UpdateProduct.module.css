@@ -37,14 +37,14 @@
   border-radius: 0.6rem;
   border: none;
 
-  background-color: #ffd0a4;
+  background-color: rgb(250, 159, 174);
   color: #5d4037;
 
   transition: all 0.5s;
 }
 
 .formContainer button:hover {
-  background-color: #e6b78b;
+  background-color: pink;
 }
 
 @media (max-width: 768px) {
