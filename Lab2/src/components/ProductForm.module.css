@@ -23,13 +23,15 @@
 .formContainer {
   padding: 2rem;
   border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.85); /* ← 더 어둡게 */
+  color: #fff;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
 }
+
 
 .formContainer button {
   display: inline-block;

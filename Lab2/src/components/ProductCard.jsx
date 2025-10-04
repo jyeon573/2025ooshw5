@@ -12,13 +12,10 @@ const ProductCard = ({ product, putProduct, deleteProduct }) => {
   const imgSrc = imageUrl || image || thumbnail || FALLBACK_IMG;
 
   const handleMinus = async () => {
-    if (amt > 1) {
-      await putProduct({ ...product, amount: amt - 1 });
-    } else {
-      const ok = window.confirm("Are you sure you want to delete this item?");
-      if (ok) deleteProduct(id);
-    }
-  };
+  const newAmount = Math.max(amt - 1, 0); // 최소 0까지만
+  await putProduct({ ...product, amount: newAmount });
+};
+
 
   const handlePlus = async () => {
     await putProduct({ ...product, amount: amt + 1 });

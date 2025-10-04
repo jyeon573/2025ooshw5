@@ -1,17 +1,19 @@
 .cardContainer {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.85); /* 어두운 반투명 */
-  border-radius: 1rem;
-  overflow: hidden;
-  margin-bottom: 1rem;
-  width: 30rem;
-  height: 15rem;
+  position: relative; 
+  max-width: 20rem;
+  min-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 
-  display: grid;
-  grid-template-columns: 40% 60%;
-  color: #fff;
-  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.85); /* <-- 여기 수정 */
+  color: #fff; /* 흰색 글씨로 통일 */
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
 }
+
 
 /* 이미지: 카드 높이에 맞게 꽉 채우기 */
 .cardContainer img {

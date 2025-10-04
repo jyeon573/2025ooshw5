@@ -5,16 +5,17 @@ import { FaGithub } from "react-icons/fa";
 const AboutContainer = () => {
   return (
     <div className={styles.cardContainer}>
-      <h4>Umut Can Gün</h4>
-      <p>Full-Stack Developer</p>
+      <h4>Dayeon Jung</h4>
+      <p>Student · Handong Global University (CS/EE)</p>
       <p className="fs-6 w-75 text-center">
-        A driven professional with a passion for learning and a knack for
-        swiftly mastering new domains. With a background in Dentistry and strong
-        foundations in mathematics seamlessly transitioned into software
-        development.
+        This page was originally created by <strong>Umut Can Gün</strong> and later
+        adapted by <strong>Dayeon Jung (22400661)</strong> for the course{" "}
+        <em>Open Source Studio & Web Service Development</em> at Handong Global University.
       </p>
+
+
       <a
-        href="https://github.com/ucangun"
+        href="https://2025ooshw.netlify.app/"
         target="blank"
         className="text-dark fs-3"
       >
