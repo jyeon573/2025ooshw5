@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: #1e1e1e;
+        }
+
+        #menu {
+            color: pink;
+            font-size: 30px;
+            list-style: none;
+            display: flex;
+            padding: 30px;
+            justify-content: space-evenly;
+            /* 아이템들 균등 배치 */
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            a {
+                color: rgb(222, 124, 141);
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: lightpink;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #menu {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li><a href="https://2025ooshw5lab1.vercel.app/">Lab 1</a></li>
+        <li><a href="./lab4/js_ajax.html">Lab 2</a></li>
+    </ul>
+</body>
+
+</html>
