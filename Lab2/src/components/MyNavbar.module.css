@@ -1,0 +1,16 @@
+.navbar {
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.navlink {
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.navlink:hover,
+.navlin:active {
+  border-radius: 0.5rem;
+  color: #ffcb9a !important;
+}

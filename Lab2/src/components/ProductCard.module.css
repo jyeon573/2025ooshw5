@@ -1,0 +1,146 @@
+.cardContainer {
+  background-color: rgba(255, 255, 255, 0.896);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  width: 30rem;
+  height: 15rem;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.cardContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.productInfo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.productInfo h3 {
+  font-size: 1.7rem;
+  margin-top: 0.8rem;
+}
+
+.price {
+  font-size: 1.5rem;
+}
+
+.price::after {
+  content: "€";
+  margin-left: 0.2rem;
+}
+
+.amountContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+}
+
+.amountContainer button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: #fff;
+  background-color: #333;
+
+  border: none;
+  border-radius: 20%;
+  margin-bottom: 1.8rem;
+}
+
+.amountContainer p {
+  font-size: 1.2rem;
+}
+
+.remove {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  background-color: #333;
+  color: #fff;
+  transition: all 0.5s;
+  margin-bottom: 0.5rem;
+}
+
+.total {
+  font-size: 1.2rem;
+}
+
+.total::after {
+  content: "€";
+  margin-left: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .cardContainer img {
+    height: 25rem;
+  }
+
+  .productInfo h3 {
+    font-size: 1.5rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  .amountContainer p {
+    font-size: 1rem;
+  }
+
+  .remove,
+  .total {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 1rem;
+  }
+
+  .cardContainer img {
+    height: 25rem;
+  }
+
+  .productInfo h3 {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .amountContainer p {
+    font-size: 0.9rem;
+  }
+
+  .remove,
+  .total {
+    font-size: 0.9rem;
+  }
+}

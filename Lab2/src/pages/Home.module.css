@@ -1,0 +1,72 @@
+.container {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url("../assets/img1.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 70vh;
+
+  color: #fff;
+}
+
+.home h1 {
+  width: 60%;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons button {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #ffd0a4;
+  color: #5d4037;
+
+  transition: all 0.5s;
+}
+
+.buttons button:hover {
+  background-color: #e6b78b;
+}
+
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+
+  .buttons button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 1.2rem;
+    width: 95%;
+  }
+
+  .buttons button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
