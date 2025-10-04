@@ -8,7 +8,7 @@ const Home = () => {
     <div className={styles.container}>
       <MyNavbar />
       <section className={styles.home}>
-        <h1>Welcome Our Product Management System</h1>
+        <h1>Welcome Dayeon's Product Management System</h1>
         <div className={styles.buttons}>
           <button onClick={() => navigate("/newproduct")}>
             Add New Product
