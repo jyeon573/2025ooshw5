@@ -1,4 +1,3 @@
-import { NavLink } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import styles from "./MyNavbar.module.css";
